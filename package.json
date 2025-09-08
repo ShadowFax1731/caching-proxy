@@ -1,0 +1,30 @@
+{
+  "name": "caching-proxy",
+  "version": "1.0.0",
+  "description": "A repository to build a CLI tool that starts a caching proxy server, it will forward requests to the actual server and cache the responses. If the same request is made again, it will return the cached response instead of forwarding the request to the server.",
+  "main": "src/index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ShadowFax1731/caching-proxy.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/ShadowFax1731/caching-proxy/issues"
+  },
+  "homepage": "https://github.com/ShadowFax1731/caching-proxy#readme",
+  "dependencies": {
+    "commander": "^14.0.0",
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^3.1.10"
+  }
+}
