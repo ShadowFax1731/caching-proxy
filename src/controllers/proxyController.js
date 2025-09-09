@@ -6,6 +6,7 @@ const handleProxy = async (req, res) => {
     const cachedResponse = cache.get(key);
     const ORIGIN = options.origin;
 
+
     if (cachedResponse) {
         // ✅ Serve from cache
         const { body, headers, status } = cachedResponse;

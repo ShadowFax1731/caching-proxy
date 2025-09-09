@@ -13,7 +13,7 @@
     "url": "git+https://github.com/ShadowFax1731/caching-proxy.git"
   },
   "bin": {
-    "caching-proxy": "./index.js"
+    "caching-proxy": "./src/index.js"
   },
   "keywords": [],
   "author": "",
