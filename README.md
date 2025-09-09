@@ -1,5 +1,7 @@
 # Caching Proxy
 
+> **Project Challenge**: This project is part of the [Caching Server challenge](https://roadmap.sh/projects/caching-server) from roadmap.sh - a hands-on project to build a caching proxy server from scratch.
+
 A high-performance command-line tool that creates a caching proxy server to improve application performance by caching HTTP responses and reducing redundant requests to origin servers.
 
 ## 📖 Overview
@@ -7,7 +9,6 @@ A high-performance command-line tool that creates a caching proxy server to impr
 This caching proxy server acts as an intelligent intermediary between clients and origin servers. It forwards incoming requests to the target server and caches the responses for improved performance.
 
 **How it works:**
-
 - **First request**: Forwarded to the origin server, cached, and returned to client
 - **Subsequent requests**: Served directly from cache for faster response times
 
@@ -58,19 +59,16 @@ Options:
 ### Examples
 
 **1. Start proxy on a custom port**
-
 ```bash
 caching-proxy --port 8080 --origin https://jsonplaceholder.typicode.com
 ```
 
 **2. Clear cache before starting**
-
 ```bash
 caching-proxy --port 3000 --origin http://dummyjson.com --clear-cache
 ```
 
 **3. Test the proxy**
-
 ```bash
 # Start the proxy
 caching-proxy --port 3000 --origin http://dummyjson.com
@@ -83,20 +81,16 @@ curl http://localhost:3000/products/1   # This should be served from cache
 ## 🔎 How It Works
 
 ### First Request Flow
-
 ```
 Client → Proxy → Origin Server → Proxy → Client
 ```
-
 - Response is cached and returned
 - Headers show `X-Cache: MISS`
 
 ### Subsequent Identical Requests
-
 ```
 Client → Proxy → Client
 ```
-
 - Response served directly from cache
 - Headers show `X-Cache: HIT`
 
